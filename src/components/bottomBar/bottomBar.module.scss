@@ -1,0 +1,34 @@
+@use '../../styles/variables' as *;
+
+
+.bgbottom {
+    background-color: $colorBlack ;
+}
+
+
+
+.bottomBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $colorNav;
+    padding: 24px 20px;
+
+    .policy {
+        margin-right: 40px;
+    }
+
+    a {
+        color: $colorNav;
+        padding: 0 20px;
+        cursor: pointer;
+
+        &:hover {
+            color: $colorTer;
+        }
+    }
+
+    a+a {
+        border-left: 1px solid $colorNav;
+    }
+}

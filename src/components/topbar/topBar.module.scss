@@ -1,0 +1,25 @@
+@use '/src/styles/variables' as *;
+
+
+.bar {
+    height: 2px;
+    width: 100%;
+    display: flex;
+
+
+    div {
+        flex: 1;
+    }
+
+    .colorOne {
+        background-color: $colorPri;
+    }
+
+    .colorTwo {
+        background-color: $colorTer;
+    }
+
+    .colorThree {
+        background-color: $colorSec;
+    }
+}

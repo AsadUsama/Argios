@@ -1,0 +1,101 @@
+@use '../../styles/variables' as *;
+
+
+.cartContainer {
+    width: 350px;
+    height: 100vh;
+    background-color: $colorNav;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: $colorBlack;
+    transform: translateX(400px);
+    animation: cartSilde 0.5s ease-in-out forwards;
+
+    h2 {
+        margin: 0 auto;
+    }
+
+    .itemsInCart {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+        flex: 1;
+        overflow-y: auto;
+        border-radius: 10px;
+        color: $colorGrey;
+    }
+
+    .totalOrder {
+
+        width: 100%;
+
+    }
+
+
+    .totalOrder {
+        width: 100%;
+        padding-top: 10px;
+
+        h4 {
+            text-align: center;
+            padding-bottom: 10px;
+            // color: $colorPri;
+            border-bottom: 1px solid $colorGrey;
+        }
+
+        // 💡 Target all sections inside totalOrder
+        .price,
+        .discount,
+        .tax,
+        .total {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            color: $colorGrey;
+
+            p {
+                margin: 0; // removes default space between paragraphs
+            }
+        }
+
+        .total {
+            font-weight: bold;
+            border-top: 1px solid $colorGrey;
+            padding-top: 8px;
+            color: $colorBlack;
+            margin-bottom: 20px;
+        }
+
+        .discount {
+            color: $colorSec;
+        }
+
+    }
+
+    .cartBarBtn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@keyframes cartSilde {
+
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}

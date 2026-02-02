@@ -1,0 +1,51 @@
+@use '../../styles/variables' as *;
+
+
+.footThree {
+
+    .newsItems {
+        margin-top: 20px;
+        width: 60%;
+
+        a {
+            display: block;
+
+            &:hover h5 {
+                color: $colorGrey;
+                text-decoration: underline;
+            }
+
+            h5 {
+                color: $colorWhite;
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            p {
+                color: $colorSec;
+                font-size: 16px;
+                margin-top: 5px;
+
+            }
+        }
+
+
+        a+a {
+            margin-top: 20px;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {}
+
+.footThree {
+
+    .newsItems {
+
+        width: 95%;
+
+
+    }
+}

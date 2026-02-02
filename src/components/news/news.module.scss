@@ -1,0 +1,186 @@
+@use '../../styles/variables' as *;
+
+// .newsWrap {
+//     // display: flex;
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     width: 100%;
+//     gap: 25px;
+//     margin-top: 40px;
+//     margin-bottom: 150px;
+
+//     .newsContainer {
+//         display: flex;
+//         flex-direction: column;
+//         border-radius: 10px;
+//         background-color: $colorWhite;
+//         box-shadow: 0 0 8px 3px rgba($color: #000000, $alpha: 0.2);
+//         // width: 33.3%;
+//         transition: all 0.3s ease-in-out;
+//         justify-content: stretch;
+//         cursor: pointer;
+
+
+//         &:hover {
+//             transform: translateY(-5px);
+//         }
+
+//         &:hover .newsContent>.newsHeading h2 {
+//             text-decoration-color: $colorBlack ;
+//         }
+
+
+//         .newsImages {
+//             width: 100%;
+//             max-height: 365px;
+//             border-top-left-radius: 10px;
+//             border-top-right-radius: 10px;
+//             position: relative;
+//             margin-bottom: 30px;
+
+
+//             .newsImg {
+//                 width: 100%;
+//                 height: auto;
+//                 display: block;
+//             }
+
+//             .newsDate {
+//                 color: $colorWhite;
+//                 position: absolute;
+//                 left: 50%;
+//                 transform: translateX(-50%);
+//                 background-color: $colorPri;
+//                 border-radius: 10px;
+//                 padding: 5px 20px;
+//                 font-weight: 700;
+//                 bottom: -21px;
+//                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+//             }
+//         }
+
+//         .newsContent {
+//             display: flex;
+//             flex-direction: column;
+
+
+//             .mataData {
+//                 gap: 15px;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 color: $colorGrey;
+//                 margin-bottom: 10px;
+
+//                 >p {
+//                     padding-left: 20px;
+//                 }
+
+//                 .name,
+//                 .comment {
+//                     position: relative;
+
+//                     &::before {
+//                         content: '';
+//                         position: absolute;
+//                         top: 50%;
+//                         transform: translateY(-50%);
+//                         left: 0;
+//                         width: 15px;
+//                         height: 15px;
+//                         background-repeat: no-repeat;
+//                         background-size: contain;
+//                     }
+
+//                 }
+
+//                 .name {
+//                     &::before {
+//                         background-image: url(../../assest/icons/displayImg.svg);
+
+//                     }
+//                 }
+
+//                 .comment {
+//                     &::before {
+//                         background-image: url(../../assest/icons/comment.svg);
+
+//                     }
+//                 }
+
+//             }
+
+//             .newsHeading {
+
+//                 text-align: center;
+//                 margin-bottom: 40px;
+
+//                 >h2 {
+//                     display: block;
+//                     align-items: center;
+//                     max-width: 70%;
+//                     margin: 0 auto;
+//                     text-decoration: underline;
+//                     text-decoration-color: transparent;
+//                     transition: all 0.3s ease-in-out;
+
+//                 }
+
+//             }
+//         }
+//     }
+// }
+
+.newsWrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 40px;
+    margin-bottom: 150px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .newsWrap {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 100px;
+
+        &>*:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .newsWrap {
+        grid-template-columns: 1fr;
+        max-width: 70%;
+        margin-inline: auto;
+        gap: 20px;
+
+
+
+        &>*:last-child:nth-child(odd) {
+
+            min-width: 100%;
+
+
+        }
+
+
+
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .newsWrap {
+        margin-top: 0;
+        max-width: 100%;
+        margin-bottom: 60px;
+    }
+}

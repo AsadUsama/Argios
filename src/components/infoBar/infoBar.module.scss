@@ -1,0 +1,100 @@
+@use '../../styles/variables' as *;
+
+.rowInfo {
+    display: flex;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+
+}
+
+
+
+
+.logo {
+    display: block;
+    margin-right: 70px;
+    max-height: 52px;
+}
+
+.social {
+    margin-left: 70px;
+
+}
+
+.burger {
+    height: 40px;
+    width: 40px;
+    display: none;
+    border-radius: 10px;
+    background: none;
+
+
+
+}
+
+.menu {
+    background-color: #fff;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    height: auto;
+    width: 100%;
+    z-index: 5000;
+    padding: 20px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menuClosed {
+    transform: translateY(-1000px);
+    opacity: 0;
+    pointer-events: none; // Prevents interaction when hidden
+}
+
+.menuOpen {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .logo {
+        margin-right: 30px;
+    }
+
+    .social {
+        margin-left: 30px;
+    }
+
+}
+
+@media screen and (max-width: 1185px) {
+
+    .social {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .rowInfo {
+        justify-content: space-between;
+    }
+
+    .burger {
+        display: flex;
+        margin: auto 0;
+    }
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .rowInfo {
+        justify-content: space-between;
+    }
+
+    .burger {
+        background-color: transparent;
+    }
+}

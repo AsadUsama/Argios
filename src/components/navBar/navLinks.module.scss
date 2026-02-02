@@ -1,0 +1,100 @@
+// @use '../../styles/variables' as *;
+
+
+// .navlink {
+//     display: flex;
+
+//     .nav+.nav {
+
+//         padding-left: 30px;
+//     }
+
+//     .nav {
+//         padding-right: 30px;
+//         padding-top: 20px;
+//         padding-bottom: 20px;
+//         font-weight: 700;
+//     }
+
+
+
+// }
+
+
+
+
+// .navAnchor {
+
+//     color: $colorGrey;
+
+//     :hover {
+//         color: $colorTer;
+//     }
+// }
+
+
+// .activeLink {
+//     color: $colorSec;
+// }
+
+
+@use '../../styles/variables' as *;
+
+// Navbar variant styles (default)
+.navlink {
+    display: flex;
+
+    .nav+.nav {
+        padding-left: 30px;
+    }
+
+    .nav {
+        padding-right: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-weight: 700;
+    }
+}
+
+.navAnchor {
+    color: $colorGrey;
+
+    &:hover {
+        color: $colorTer;
+    }
+}
+
+.activeLink {
+    color: $colorSec;
+}
+
+// Menu variant styles
+.navlinkMenu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .navMenu {
+        width: 100%;
+        padding: 20px 0 20px 30px;
+        font-weight: 700;
+        text-align: left;
+        border-bottom: 1px solid rgba($colorGrey, 0.2);
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.navAnchorMenu {
+    color: $colorGrey;
+
+    &:hover {
+        color: $colorTer;
+    }
+}
+
+.activeLinkMenu {
+    color: $colorSec;
+}

@@ -1,0 +1,322 @@
+@use '../../styles/variables' as *;
+
+.chooseUs {
+
+    width: 100%;
+    display: flex;
+    margin: 100px 0 50px 0;
+
+
+    .tabHeading {
+        display: none;
+
+
+
+        h4 {
+            color: $colorSec;
+            font-family: $accFont;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: $colorGrey;
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+
+
+    .imgWrap {
+        margin-right: 20px;
+        position: relative;
+        width: 55%;
+        height: auto;
+
+        .imgText {
+            position: absolute;
+            right: 12%;
+            top: 22%;
+            background-color: $colorSec;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            width: 50%;
+            // padding: 40px;
+            padding: 20px 0;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                bottom: -19%;
+                border-left: 30px solid transparent;
+                border-top: 30px solid $colorSec;
+                right: 0;
+                z-index: 100;
+            }
+
+            h2 {
+                width: 50%;
+                margin-left: auto;
+                font-family: $accFont;
+                color: $colorWhite;
+
+            }
+        }
+
+
+        img {
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .textWrap {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+
+
+        h4 {
+            color: $colorSec;
+            font-family: $accFont;
+            margin-bottom: 10px;
+        }
+
+        .mainPara {
+            color: $colorGrey;
+            margin-top: 10px;
+
+        }
+
+
+        .features {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+
+
+
+            .feature {
+                display: flex;
+                flex-direction: column;
+                margin-left: 60px;
+
+
+
+                h3 {
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 40px;
+                        height: 40px;
+                        mask-image: url(../../assest/icons/tick.svg);
+                        mask-repeat: no-repeat;
+                        mask-size: contain;
+                        background-color: $colorPri;
+                        top: 5px;
+                        left: -60px;
+
+                    }
+
+                }
+
+                &:nth-child(2) h3::before {
+                    background-color: $colorTer;
+                }
+
+                &:nth-child(3) h3::before {
+                    background-color: $colorSec;
+                }
+
+                p {
+                    color: $colorGrey;
+                }
+
+
+
+            }
+
+            .feature:nth-last-child(-n + 2) {
+                margin-top: 30px;
+            }
+
+
+
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1280px) {
+
+    .chooseUs {
+        .imgWrap {
+            width: 50%;
+
+
+            .imgText {
+
+
+                h2 {
+                    width: 70%;
+                    padding-right: 20px;
+
+                }
+            }
+        }
+
+        .textWrap {
+            width: 50%;
+
+            h4 {
+                margin-bottom: 0px;
+            }
+
+            .mainPara {
+                margin-top: 0px;
+
+            }
+
+
+            .features {
+                margin: 10px 0;
+
+            }
+
+
+
+        }
+
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .chooseUs {
+        flex-direction: column;
+
+        .tabHeading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+
+            h1 {
+                text-align: center;
+            }
+        }
+
+        .imgWrap {
+            width: 100%;
+            margin-right: 0px;
+
+            img {
+                max-height: 500px;
+                border-radius: 10px;
+            }
+
+
+            .imgText {
+                right: 6%;
+                top: 12%;
+                width: 35%;
+                padding-right: 10px;
+
+
+
+                h2 {
+                    width: 60%;
+
+                }
+
+
+            }
+        }
+
+        .textWrap {
+            width: 100%;
+
+
+            .mainPara {
+                margin-top: 20px;
+
+            }
+
+            .textContent {
+                width: 80%;
+                // text-align: center;
+                margin-top: 20px;
+
+
+                h1,
+                h4,
+                .mainPara {
+
+                    display: none;
+                }
+            }
+
+
+
+            .features {
+                text-align: left;
+                margin: 20px 0;
+            }
+
+            Button {
+                margin-top: 20px;
+            }
+        }
+
+    }
+
+
+
+}
+
+@media screen and (max-width: 500px) {
+    .chooseUs {
+        margin-top: 50px;
+        margin-bottom: 0;
+
+        .textWrap {
+            .textContent {
+                width: 100%;
+                margin-block: 0;
+            }
+
+            .features {
+                .feature {
+                    margin-left: 50px;
+
+                    h3 {
+                        &::before {
+                            width: 30px;
+                            height: 30px;
+                            left: -45px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .imgWrap {
+            .imgText {
+                width: 70%;
+                padding: 10px 0;
+            }
+        }
+    }
+
+}

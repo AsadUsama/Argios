@@ -1,0 +1,119 @@
+@use '../../styles/variables' as *;
+
+
+
+.offerBg {
+    position: relative;
+    background-color: transparent;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: $colorNav;
+        inset: 0;
+        width: 100%;
+        height: 45%;
+        z-index: -100;
+    }
+}
+
+
+
+
+.offerWrap {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding-bottom: 100px;
+
+    .offerWrap {
+        gap: 20px;
+    }
+}
+
+.offerCard {
+    position: relative;
+    width: 25%;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+
+
+    &:hover {
+        box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.3);
+
+        .overlay,
+        .offerBtn {
+            opacity: 1;
+        }
+
+        .offerBg {
+            transition: all 0.4s ease-in-out;
+            transform: scale(1.2);
+        }
+
+    }
+
+    .offerBg {
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .textWrap {
+
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $colorWhite;
+        width: 80%;
+        max-width: 80%;
+        border-radius: 10px;
+        padding: 50px 80px 20px 80px;
+
+        h4 {
+            text-align: center;
+        }
+    }
+
+    .iconImg {
+        position: absolute;
+        left: 50%;
+        bottom: 125px;
+        transform: translateX(-50%);
+    }
+
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        height: 100%;
+        z-index: 1;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+
+    }
+
+
+    .offerBtn {
+        position: absolute;
+        padding: 12px 24px;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transition: all 0.3s ease-in-out;
+        transform: translate(-50%, -50%);
+
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .offerWrap {
+        gap: 20px;
+    }
+}

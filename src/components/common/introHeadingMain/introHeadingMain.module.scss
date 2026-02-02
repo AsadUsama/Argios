@@ -1,0 +1,19 @@
+@use "../../../styles/variables" as *;
+
+
+
+.headingWrap {
+    margin-bottom: 20px;
+
+
+    .subHeading {
+        color: $colorSec;
+        font-family: $accFont;
+    }
+
+    // .mainHeading {
+    //     text-align: center;
+    // }
+
+
+}

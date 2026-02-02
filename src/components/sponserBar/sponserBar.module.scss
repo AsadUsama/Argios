@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+
+.sponserBg {
+    background-color: $colorSec;
+    padding: 80px;
+
+
+    .sponserBar {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+
+        img {
+            min-width: 0;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .sponserBg {
+        padding: 40px 0;
+
+
+    }
+}

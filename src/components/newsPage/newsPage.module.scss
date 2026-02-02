@@ -1,0 +1,52 @@
+@use "../../styles/variables" as *;
+
+.newsWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 100px 0;
+    gap: 20px;
+    align-items: stretch;
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .newsWrapper {
+        grid-template-columns: repeat(2, 1fr);
+
+        &>*:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .newsWrapper {
+        grid-template-columns: 1fr;
+        max-width: 70%;
+        margin-inline: auto;
+        gap: 20px;
+
+
+
+        &>*:last-child:nth-child(odd) {
+            min-width: 100%;
+
+        }
+
+
+
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .newsWrapper {
+        max-width: 100%;
+        margin-bottom: 60px;
+    }
+}

@@ -1,0 +1,68 @@
+@use '../../../styles/variables' as *;
+
+
+
+.status {
+    width: 100%;
+}
+
+.statusWrapMain {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 50px 40px;
+    border-radius: 10px;
+    justify-content: space-around;
+
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $colorWhite;
+        font-size: 20px;
+        padding: 30px;
+        border-radius: 10px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .statusWrapMain {
+        padding: 30px 20px;
+        justify-content: center;
+        gap: 10px;
+
+        a {
+            white-space: nowrap;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 770px) {
+    .statusWrapMain {
+        a {
+            font-size: 16px;
+        }
+    }
+
+}
+
+@media screen and (max-width:660px) {
+
+    .status {
+        display: none;
+    }
+}

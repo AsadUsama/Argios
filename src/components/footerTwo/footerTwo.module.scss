@@ -1,0 +1,38 @@
+@use '../../styles/variables' as *;
+
+.footTwo {
+
+    ul {
+        margin-top: 20px;
+        margin-left: 15px;
+
+        li {
+            list-style: none;
+            margin-bottom: 10px;
+            position: relative;
+
+
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 12px;
+                height: 12px;
+                color: $colorGrey;
+                top: 6px;
+                left: -20px;
+                background-image: url('../../assest/icons/leaf.svg');
+            }
+
+            &:hover a {
+                color: white;
+            }
+
+            a {
+                color: $colorGrey;
+
+            }
+        }
+    }
+
+}

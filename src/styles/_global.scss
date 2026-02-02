@@ -1,0 +1,247 @@
+@use './variables' as *;
+
+/* Box model and margins */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Root and body setup */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+
+/* Links */
+a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+
+    text-decoration: none;
+}
+
+/* Media elements */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Container for layout */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    font-family: $mainFont;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 48px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+input {
+
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    color: $colorGrey;
+    border-radius: 10px;
+    height: 30px;
+    font-family: $mainFont;
+
+}
+
+textarea {
+    border: none;
+    outline: none;
+    color: $colorGrey;
+    resize: none;
+    border-radius: 10px;
+    font-family: $mainFont;
+}
+
+p {
+    line-height: 2;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $colorPri;
+    border-radius: 10px;
+
+    &:hover {
+        background: darken($colorPri, 10%);
+    }
+}
+
+// Text 
+// acctext- covered by your grace  v    
+// H1 Manrope ExtraBold 48
+// H2 Manrope ExtraBold 24
+// para - Manrope med  16
+// for topbar paragraph manrope semibold 12    v
+// navtext manrope semibold 16
+// foooter heading main- Manrope Bold 20 
+// foooter heading mini- Manrope Bold 16
+// foooter text - Manrope Reg 15
+// Button text - Manrope Bold 14 - link text
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 40px;
+
+    }
+
+
+
+    h2 {
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    h4 {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+
+@media screen and (max-width: 970px) {
+
+    h1 {
+        font-weight: 800;
+        font-size: 42px;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    h4 {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    h1 {
+        font-weight: 800;
+        font-size: 38px;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    h4 {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+}

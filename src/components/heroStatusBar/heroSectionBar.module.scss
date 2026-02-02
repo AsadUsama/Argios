@@ -1,0 +1,9 @@
+@use "../../styles/variables" as *;
+
+
+
+.statusDataWrap {
+    background-color: $colorPri;
+    margin-bottom: -130px;
+    z-index: 100;
+}

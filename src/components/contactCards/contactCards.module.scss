@@ -1,0 +1,75 @@
+@use '../../styles/variables' as *;
+
+.cardsSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 100px 0;
+
+}
+
+.card {
+    padding: 40px;
+    border-radius: 10px;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+
+    p {
+        width: 70%;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+
+    &.primary {
+        background-color: $colorPri;
+    }
+
+    &.secondary {
+        background-color: $colorSec;
+    }
+
+    &.tertiary {
+        background-color: $colorTer;
+    }
+}
+
+.title {
+    font-family: $accFont;
+    // font-size: 1.25rem;
+    // margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .cardsSection {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 0;
+        margin-top: 50px;
+    }
+
+    .card {
+        &:last-child:nth-child(odd) {
+            grid-column: 1 /-1;
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cardsSection {
+        grid-template-columns: 1fr;
+
+    }
+
+    .card {
+
+
+        &:last-child:nth-child(odd) {
+
+            width: 100%;
+        }
+    }
+}

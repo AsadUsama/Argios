@@ -1,0 +1,35 @@
+@use "../../styles/variables" as *;
+
+
+.aboutWrapper {
+    display: grid;
+    width: 100%;
+    // flex-wrap: nowrap;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 100px;
+
+}
+
+
+@media screen and (max-width: 1130px) {
+
+    .aboutWrapper {
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .aboutWrapper {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 15px;
+        margin-inline: auto;
+        margin-bottom: 50px;
+
+    }
+}

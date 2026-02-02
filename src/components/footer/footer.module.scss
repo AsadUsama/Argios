@@ -1,0 +1,105 @@
+@use '../../styles/variables' as *;
+
+.footer {
+    background-color: $colorFoot;
+    color: white;
+
+    .footercontent {
+        display: grid;
+        grid-template-columns: 1fr 0.75fr 1.2fr 1fr;
+        // display: flex;
+        padding: 121px 0;
+        // flex-wrap: nowrap;
+        gap: 25px;
+        align-items: stretch;
+
+
+        // >div {
+
+        // width: 25%;
+        // flex: 1 1 auto;
+        // min-width: 300px;
+
+        // }
+    }
+
+
+}
+
+@media screen and (max-width: 1280px) {
+    .footer {
+
+        .footercontent {
+            gap: 20px;
+
+
+            // >div {
+
+            // min-width: 250px;
+
+            // }
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .footer {
+
+        .footercontent {
+
+            padding: 80px 0;
+        }
+
+
+
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        .footercontent {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto auto;
+            padding: 80px 0;
+            gap: 30px;
+            row-gap: 50px;
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 970px) {
+    .footer {
+
+        .footercontent {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            padding: 60px 0;
+            gap: 25px;
+            align-items: stretch;
+
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .footer {
+
+        .footercontent {
+            grid-template-columns: 1fr;
+            padding: 40px 0;
+            gap: 20px;
+        }
+    }
+}

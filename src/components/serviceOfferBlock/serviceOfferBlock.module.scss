@@ -1,0 +1,139 @@
+@use "../../styles/variables" as *;
+
+.serviceOfferBlock {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 500px auto;
+    column-gap: 100px;
+    margin-bottom: 100px;
+
+    .serviceOfferImg {
+        border-radius: 10px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .serviceOfferData {
+        margin: auto 0;
+
+        .serviceOfferText {
+            margin-bottom: 30px;
+            font-size: 18px;
+            color: $colorGrey;
+
+
+        }
+    }
+
+    .serviceOfferCards {
+        display: flex;
+
+
+        .serviceOfferCard {
+            padding: 40px;
+            background-color: red;
+            border-radius: 10px;
+            color: $colorWhite;
+
+            &:nth-child(n+2) {
+                margin-left: 40px;
+            }
+
+            img {
+                margin-bottom: 10px;
+            }
+
+            p {
+                text-align: center;
+                display: block;
+                // width: 100px;
+            }
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .serviceOfferBlock {
+        column-gap: 50px;
+
+        .serviceOfferCards {
+            justify-content: space-between;
+            gap: 10px;
+
+            .serviceOfferCard {
+                padding: 36px;
+
+                &:nth-child(n+2) {
+                    margin-left: 0;
+                }
+
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1100px) {
+    .serviceOfferBlock {
+        grid-template-columns: 1fr;
+        gap: 50px;
+
+        .serviceOfferImg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .serviceOfferData {
+            text-align: center;
+
+            .serviceOfferText {
+                text-align: center;
+
+
+            }
+        }
+
+        .serviceOfferCards {
+            gap: 30px;
+            justify-content: center;
+            width: 100%;
+
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .serviceOfferBlock {
+        margin-bottom: 50px;
+
+        .serviceOfferCards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 100%;
+
+            .serviceOfferCard {
+
+                &:last-child:nth-child(odd) {
+                    grid-column: 1 / -1;
+                    justify-self: center;
+                    width: 50%;
+                }
+
+
+                img {
+                    margin-inline: auto;
+                }
+            }
+        }
+    }
+
+}

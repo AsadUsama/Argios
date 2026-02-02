@@ -1,0 +1,290 @@
+@use '../../styles/variables' as *;
+
+
+.chooseBg {
+    background-color: $colorNav;
+
+
+    .wrapper {
+        display: flex;
+        width: 100%;
+        margin: 100px 0;
+    }
+
+    .wrapperOne {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+
+        .textOne {
+
+
+            h4 {
+                font-family: $accFont;
+                color: $colorSec;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            p {
+                margin-bottom: 30px;
+                color: $colorGrey;
+            }
+        }
+    }
+
+    .wrapperTwo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        width: 70%;
+
+        .arrow {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: $colorWhite;
+            background-image: url('../../assest/icons/arrow.svg');
+            background-size: 60%;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+            z-index: 10;
+            top: 50%;
+
+
+            &:hover {
+                background-color: $colorNav;
+                box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+            }
+
+            &:active {
+                box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2),
+                    inset 0 0 5px 1px rgba(0, 0, 0, 0.2);
+
+            }
+
+        }
+
+        .prev {
+
+            left: 20px;
+            transform: rotate(90deg) translateX(-50%);
+        }
+
+        .next {
+
+            transform: rotate(-90deg) translateX(50%);
+            right: 20px;
+        }
+
+        .testimonials {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+
+
+
+        }
+
+        .testimonial {
+            width: 100%;
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+
+            .testimonialCard {
+                display: flex;
+                width: 80%;
+                padding: 40px;
+                background-color: $colorWhite;
+                border-radius: 10px;
+                align-items: center;
+                box-shadow: 0 0 15px 2px rgba($color: #000000, $alpha: 0.1);
+            }
+
+            .testimonialData {
+                display: flex;
+                flex-direction: column;
+                padding-right: 30px;
+                max-width: 80%;
+
+                p {
+                    color: $colorGrey;
+                }
+
+                h3 {
+                    margin-top: 30px;
+                }
+            }
+
+            .testimonialImg {
+                margin: auto 0;
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+                border: 3px dotted $colorSec;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 95%;
+                    height: 95%;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+
+            }
+        }
+
+
+    }
+}
+
+
+
+@media screen and (max-width: 1130px) {
+    .chooseBg {
+
+        .wrapper {
+
+            flex-direction: column;
+
+            .wrapperOne {
+                width: 100%;
+            }
+        }
+
+        .textOne {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            h1 {
+                margin-bottom: 10px;
+                font-size: 40px;
+            }
+
+            p {
+                margin-bottom: 0px;
+                max-width: 80%;
+            }
+
+            Button {
+                display: none;
+            }
+        }
+
+
+        .wrapperTwo {
+            width: 100%;
+
+
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 770px) {
+
+    .chooseBg {
+        .wrapper {
+            .wrapperTwo {
+
+                .arrow {
+                    width: 40px;
+                    height: 40px;
+                    background-size: 60%;
+                }
+
+                .testimonial {
+                    .testimonialCard {
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        text-align: center;
+                        padding: 20px;
+                    }
+
+                    .testimonialData {
+                        max-width: 100%;
+                        padding: 0;
+
+                        h3 {
+                            margin-top: 10px;
+                        }
+                    }
+
+                    .testimonialImg {
+                        width: 110px;
+                        height: 110px;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .prev {
+                    left: 5px;
+                }
+
+                .next {
+                    right: 5px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .chooseBg {
+        .wrapper {
+            margin: 50px 0;
+
+            .wrapperOne {
+                p {
+                    max-width: 100%;
+                }
+            }
+
+            .wrapperTwo {
+                .arrow {
+                    top: 86%;
+                }
+
+                .prev {
+                    left: 35%;
+                    transform: rotate(90deg) translateX(0);
+
+                }
+
+                .next {
+                    right: 35%;
+                    transform: rotate(-90deg) translateX(0);
+
+                }
+
+                .testimonial {
+                    padding-bottom: 60px;
+
+                    .testimonialCard {
+                        width: 100%;
+                        box-shadow: none;
+
+
+                    }
+                }
+            }
+        }
+    }
+}

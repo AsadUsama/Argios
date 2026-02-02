@@ -1,0 +1,257 @@
+@use '../../styles/variables' as *;
+
+
+
+.introAboutWrap {
+    display: flex;
+    width: 100%;
+    padding: 100px 0;
+
+    .aboutImgWrap {
+
+        padding-left: 10px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100px;
+            height: 100px;
+            top: 39%;
+            // left: 25px;
+            // left: 4%;
+            left: 10%;
+            border-radius: 10px;
+            z-index: -1;
+            background-color: $colorTer;
+        }
+
+
+        img {
+            border-radius: 10px;
+
+        }
+
+
+
+        .aboutImgTwo {
+            bottom: 0;
+            left: 0;
+            max-height: 321px;
+
+
+        }
+    }
+
+
+    .aboutTextWrap {
+        width: 55%;
+        margin-top: auto;
+        margin-bottom: auto;
+
+
+        .subHeading {
+
+            color: $colorPri;
+            margin: 40px 0;
+        }
+
+        .aboutDescription {
+            color: $colorGrey;
+            margin-bottom: 40px;
+        }
+
+        .benifits {
+            font-weight: 700;
+            position: relative;
+            padding-left: 30px;
+
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                background-image: url(../../assest/icons/aboutTick.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+
+        }
+
+        .aboutBtn {
+            margin-top: 40px;
+
+        }
+    }
+
+
+}
+
+
+@media screen and (max-width: 1345px) {
+
+    .introAboutWrap {
+        .aboutImgWrap {
+            &::before {
+                left: 5%;
+            }
+        }
+
+        .aboutTextWrap {
+
+
+            .subHeading {
+
+                margin: 20px 0;
+            }
+
+            .aboutDescription {
+                margin-bottom: 20px;
+            }
+
+
+            .aboutBtn {
+                margin-top: 30px;
+
+            }
+        }
+    }
+
+}
+
+
+
+@media screen and (max-width: 1280px) {
+
+    .introAboutWrap {
+        .aboutImgWrap {
+            width: 50%;
+            // flex: 1 1 50%;
+            justify-content: end;
+
+        }
+
+        .aboutTextWrap {
+            width: 50%;
+
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+
+    .introAboutWrap {
+        flex-direction: column;
+
+
+        .aboutImgWrap {
+            width: 100%;
+
+            &::before {
+                left: 20%;
+            }
+
+            .aboutImgTwo {
+
+                bottom: 0;
+                left: 10%;
+
+
+            }
+        }
+
+        .aboutTextWrap {
+
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 40px;
+            text-align: center;
+
+            .benifits {
+                text-align: left;
+                width: 50%;
+                margin: 0 auto;
+
+            }
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .introAboutWrap {
+        .aboutTextWrap {
+            width: 100%;
+        }
+
+        .aboutImgWrap {
+            &::before {
+                left: 10%;
+            }
+
+            .aboutImgTwo {
+
+                left: 0;
+            }
+        }
+
+        .aboutTextWrap {
+
+            width: 100%;
+
+            .benifits {
+                text-align: left;
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .introAboutWrap {
+        padding-block: 50px;
+
+        .aboutImgWrap {
+            padding: 0;
+            margin: 0;
+
+            &::before {
+                display: none;
+            }
+
+            .aboutImgOne {
+                width: 100%;
+
+            }
+
+            .aboutImgTwo {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .introAboutWrap {
+
+
+        .aboutTextWrap {
+
+            width: 100%;
+
+            .benifits {
+                text-align: left;
+                width: 90%;
+                margin: 0;
+            }
+        }
+    }
+}

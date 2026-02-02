@@ -1,0 +1,67 @@
+@use '../../styles/variables' as *;
+
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 16px 32px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    outline: none;
+    z-index: 1;
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+/* 🌿 Primary Button (Green) */
+.primary {
+    background-color: $colorPri;
+    color: $colorWhite;
+
+    &:hover {
+        background-color: darken($colorPri, 7%);
+        transform: translateY(-1px);
+        box-shadow: 0 2px 5px rgba($colorPri, 0.3);
+    }
+
+    &:active {
+        background-color: darken($colorPri, 10%);
+        transform: translateY(0);
+    }
+}
+
+/* 🌾 Secondary Button (Yellow) */
+.secondary {
+    background-color: $colorSec;
+    color: $colorWhite;
+
+    &:hover {
+        background-color: darken($colorSec, 7%);
+        transform: translateY(-1px);
+        box-shadow: 0 2px 5px rgba($colorSec, 0.3);
+    }
+
+    &:active {
+        background-color: darken($colorSec, 10%);
+        transform: translateY(0);
+    }
+}
+
+/* Optional: subtle variant */
+.outline {
+    background: transparent;
+    border: 1px solid $colorPri;
+    color: $colorPri;
+
+    &:hover {
+        background-color: rgba($colorPri, 0.1);
+    }
+}

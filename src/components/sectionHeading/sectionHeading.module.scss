@@ -1,0 +1,18 @@
+@use '../../styles/variables' as *;
+
+.headingWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+
+    h4 {
+        font-family: $accFont;
+        color: $colorSec;
+    }
+
+
+
+}

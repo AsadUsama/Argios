@@ -1,0 +1,104 @@
+@use '../../styles/variables' as *;
+
+
+.footFour {
+
+
+
+    .contactItems {
+        margin-top: 20px;
+
+        li {
+            margin-bottom: 10px;
+            list-style: none;
+            position: relative;
+            margin-left: 30px;
+
+            &.phone::before {
+                content: '';
+                position: absolute;
+                left: -30px;
+                top: 2px;
+                mask: url('../../assest/icons/phone.svg') no-repeat;
+                mask-size: contain;
+                background-color: $colorSec;
+                width: 16px;
+                height: 16px;
+
+            }
+
+            &.email::before {
+                content: '';
+                position: absolute;
+                left: -30px;
+                top: 2px;
+                mask: url('../../assest/icons/mail.svg') no-repeat;
+                mask-size: contain;
+                background-color: $colorSec;
+                width: 16px;
+                height: 16px;
+
+            }
+
+            &.address::before {
+                content: '';
+                position: absolute;
+                left: -30px;
+                top: 2px;
+                mask: url('../../assest/icons/location.svg') no-repeat;
+                mask-size: contain;
+                background-color: $colorSec;
+                width: 16px;
+                height: 16px;
+
+            }
+
+            a {
+                color: $colorGrey;
+                font-weight: 500;
+                font-size: 15px;
+            }
+
+            &:hover a {
+                color: $colorWhite;
+                text-decoration: underline;
+            }
+        }
+
+    }
+
+
+
+
+    .inputImg {
+        position: relative;
+        margin-top: 20px;
+
+        .inputField {
+            width: 100%;
+            padding: 25px;
+            padding-right: 55px;
+
+        }
+
+
+        button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: $colorPri;
+            width: 50px;
+            height: 50px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+            margin: 0 auto;
+
+        }
+    }
+}

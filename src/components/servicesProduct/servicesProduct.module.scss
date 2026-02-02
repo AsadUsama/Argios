@@ -1,0 +1,39 @@
+@use "../../styles/variables" as *;
+
+
+.serviceCards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding-bottom: 60px;
+    margin: 100px 0;
+
+
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .serviceCards {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .serviceCards {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 0;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .serviceCards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 0px;
+    }
+}

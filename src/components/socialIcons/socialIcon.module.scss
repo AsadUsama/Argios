@@ -1,0 +1,86 @@
+@use '../../styles/variables' as *;
+
+.socialIcons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.light {
+    background-color: $colorNav;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        transform: scale(1.1);
+    }
+}
+
+.dark {
+    background-color: $colorBlack;
+
+    &:hover {
+        background-color: $colorNav;
+        transform: scale(1.1);
+    }
+}
+
+.iconLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $colorNav;
+    padding: 13px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        transform: scale(1.1);
+    }
+}
+
+.icon {
+    display: block;
+    transition: all 0.3s ease;
+
+
+    // &:hover {
+    //     opacity: 1.2;
+    // }
+}
+
+// .iconsHeader {
+// background-color: $colorNav;
+
+// &:hover {
+//     background-color: rgba(0, 0, 0, 0.05);
+//     transform: scale(1.1);
+// }
+// }
+
+.linklight {
+    background-color: $colorNav;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        transform: scale(1.1);
+    }
+}
+
+.imgdark {
+    filter: invert(1) brightness(1);
+
+
+
+}
+
+.linkdark {
+    background-color: black;
+
+    &:hover {
+        background-color: $colorPri;
+        transform: scale(1.1);
+
+    }
+}

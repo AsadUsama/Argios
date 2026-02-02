@@ -1,0 +1,22 @@
+@use '../../styles/variables' as *;
+
+
+
+.headerBg {
+    width: 100%;
+    height: 330px;
+    background-image: url(../../assest/heroBanners/pageBg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .headerWrap {
+        width: 100%;
+        height: 330px;
+        color: $colorWhite;
+        display: grid;
+        place-items: center;
+
+    }
+
+}

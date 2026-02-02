@@ -1,0 +1,16 @@
+@use "../../Styles/variables" as *;
+
+
+
+.sponserBg {
+    background-color: $colorNav;
+    padding: 60px 0;
+
+    .sponsers {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
