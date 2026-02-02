@@ -1,6 +1,6 @@
 import Styles from './offers.module.scss';
 import Heading from '../sectionHeading/sectionHeading'
-import productOne from '../../assest/cards/ProductOne.png';
+import productOne from '../../assest/cards/productOne.png';
 import productTwo from '../../assest/cards/productTwo.png';
 import productThree from '../../assest/cards/productThree.png';
 import productFour from '../../assest/cards/productFour.png';
