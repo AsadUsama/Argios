@@ -1,4 +1,4 @@
-import Styles from './ProjectPage.module.scss';
+import Styles from './projectPage.module.scss';
 import ProjectCard from "../common/projectCard/projectCard";
 import projectPageOne from "../../assest/cards/projectPageOne.png";
 import projectPageTwo from "../../assest/cards/projectPageTwo.png";
